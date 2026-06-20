@@ -29,8 +29,8 @@
     overflow:hidden;
   }
   #app{
-    height:100dvh;
-    height:100vh;
+    height:100vh;   /* fallback */
+    height:100dvh;  /* preferred — desconta a barra do browser em mobile */
     display:flex;
     flex-direction:column;
     position:relative;
@@ -60,6 +60,7 @@
     align-items:center;
     justify-content:space-between;
     padding:14px 14px 10px;
+    padding-top:calc(14px + env(safe-area-inset-top));
     flex-shrink:0;
   }
   .text-btn{
@@ -105,6 +106,7 @@
     z-index:31;
     display:flex;flex-direction:column;
     padding:18px 14px;
+    padding-top:calc(18px + env(safe-area-inset-top));
   }
   .drawer.show{transform:translateX(0);}
   .drawer-header{display:flex;align-items:center;gap:10px;margin-bottom:18px;}
