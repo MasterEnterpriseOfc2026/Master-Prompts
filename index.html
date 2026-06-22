@@ -8,7 +8,22 @@
 <title>Master Prompts</title>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<!-- ===== LOADING SCREEN ===== -->
+<div id="loadingScreen" aria-hidden="true" aria-live="polite">
+  <div class="ls-content">
+    <div class="ls-logo">
+      <svg viewBox="0 0 100 100" width="76" height="76" role="img" aria-label="Master Prompts" class="ls-logo-svg">
+        <rect width="100" height="100" rx="26" fill="#c96442"/>
+        <polyline points="20,33 50,50 20,67" fill="none" stroke="white" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="53" y1="67" x2="78" y2="67" stroke="white" stroke-width="11" stroke-linecap="round" opacity="0.9"/>
+      </svg>
+    </div>
+    <p class="ls-brand-name">Master Prompts</p>
+    <div class="ls-dots" aria-label="Carregando">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
 
 <div id="app">
 
@@ -17,6 +32,7 @@
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
     </button>
     <div class="brand">
+      <span class="logo-mount" data-size="26"></span>
       <span class="brand-name">Master Prompts</span>
     </div>
     <button class="icon-btn" id="btnNewChat" type="button" aria-label="Iniciar novo bate-papo">
@@ -45,7 +61,7 @@
       <span class="logo-mount" data-size="22"></span>
       <div>
         <div class="drawer-footer-title">Master Prompts</div>
-        <div class="drawer-footer-sub">v1.2 · banco local de prompts</div>
+        <div class="drawer-footer-sub">v1.1 · banco local de prompts</div>
       </div>
     </div>
   </aside>
